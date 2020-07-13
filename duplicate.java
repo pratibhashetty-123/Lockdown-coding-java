@@ -1,31 +1,24 @@
-import java.util.*;
-import java.util.Scanner;
- public class repeatedelement
- {
-     public static void main (String[] args)
-     {
-         int flag=0;
-         Scanner sc=new Scanner(System.in);
-         System.out.println("Enter the length of array");
-         int length=sc.nextInt();
-         int [] myarray=new int[length];
-         System.out.println("Enter Array Elements:");
-         for(int i=0;i<length;i++)
-         myarray[i]=sc.nextInt();
-         System.out.println("the Array Elements are:");
-         for(int i =0;i<length;i++)
-               System.out.println(myarray[i]);
-               
-         for (int j=0; j<myarray.length; j++)
-             for(int k=j+1; k<myarray.length; k++)
-             if (myarray[j]==myarray[k])
-            {
-              System.out.println("Duplicate elements are:"+""+myarray[j]);
-             flag=1;
-            }
-              
-    if(flag==0)
-      System.out.println("no duplicate elements.");
-        System.out.println("-1");
-    }
- }
+package dublicate;
+
+public class Duplicate {
+	
+	     public static void main(String[] args) {  
+	        String string1 = "Great responsibility";  
+	        int count; 
+	        char string[] = string1.toCharArray();  
+	          
+	        System.out.println("Duplicate characters in a given string: ");  
+	        
+	        for(int i = 0; i <string.length; i++) {  
+	            count = 1;  
+	            for(int j = i+1; j <string.length; j++) {  
+	                if(string[i] == string[j] && string[i] != ' ') {  
+	                    count++;  
+	                    string[j] = '0';  
+	                }  
+	            } 
+	            if(count > 1 && string[i] != '0')  
+	                System.out.println(string[i]);  
+	        }  
+	    } 
+}
